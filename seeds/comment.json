@@ -1,0 +1,20 @@
+[
+  {
+    "comment_text": "I want to try the product, please send a link!",
+    "date_created": "Dec 20, 2021",
+    "user_id": 1,
+    "blog_id": 1
+  },
+  {
+    "comment_text": "This is so futuristic, I think the future will be epic!",
+    "date_created": "Nov 10, 2022",
+    "user_id": 2,
+    "blog_id": 2
+  },
+  {
+    "comment_text": "This sounds like a cool game to play after a stressing day",
+    "date_created": "Jan 10, 2023",
+    "user_id": 3,
+    "blog_id": 3
+  }
+]

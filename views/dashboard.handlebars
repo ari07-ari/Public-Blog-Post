@@ -1,0 +1,14 @@
+<div class="text-center">
+
+  {{#each blogs as |blog| }}
+  <h1>
+    <a href="/blog/{{blog.id}}">{{blog.title}}</a>
+  </h1>
+  {{/each}}
+
+  <p>
+    <a href="/post">+ New Post</a>
+  </p>
+</div>
+
+{{!-- <script src="/public/js/dashboard.js"></script> --}}

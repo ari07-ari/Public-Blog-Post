@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fund My Project!</title>
+  <link rel="stylesheet" href="/css/jass.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div class="flex-column justify-space-around">
+    <header class="display-flex justify-space-between align-center p-2">
+            
+      <div>       
+        <!-- Conditionally render login or logout links -->
+        {{#if logged_in}}
+
+        <nav class="navbar">
+          <div class="topnav text-center space-x-7 text-5xl bg-gray-300 p-5 m-4">
+            <a href="/">Home</a>
+            <a href="/dashboard">Dashboard</a>
+            <button class="no-button" id="logout">Logout</button>
+          </div>
+        </nav>
+
+        <h1>
+        <a href="/">The Blog Post!</a>
+      </h1>
+
+        {{else}}
+
+        <nav class="navbar">
+          <div class="topnav text-center space-x-7 text-5xl bg-gray-300 p-5 m-4">
+            <a href="/">Home</a>
+            <a href="/dashboard">Dashboard</a>
+            <a href="/login">Login</a>
+          </div>
+        </nav>
+
+        <h1>
+        <a href="/">The Blog Post!</a>
+      </h1>
+
+        {{/if}}
+      </div>
+    </header>
+
+
+    <main class="container container-fluid mt-5">
+      <!-- Render the sub layout -->
+      {{{ body }}}
+    </main>
+
+
+    <footer></footer>
+  </div>
+
+  <!-- Render script for logged in users only -->
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+</body>
+
+</html>
