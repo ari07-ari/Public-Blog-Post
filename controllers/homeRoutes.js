@@ -107,7 +107,11 @@ router.get('/blog/:id', async (req, res) => {
         },
         {
           model: Comment,
-          attributes: ['comment_text','date_created' ],
+          attributes: ['comment_text','date_created'],
+          include:[{
+          model: User,
+          attributes:['username']
+        }] 
         }
       ],
     });
