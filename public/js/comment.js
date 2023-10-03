@@ -26,7 +26,7 @@ const newFormHandler = async (event) => {
         });
 
         if (response.ok) {
-            document.location.replace('/blog');
+            document.location.replace('/');
         } else {
             alert(response.statusText);
         }

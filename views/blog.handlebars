@@ -1,11 +1,11 @@
 <!-- Loop over each object in the blogs array -->
 <div class="text-center">
-  <div class="row mb-4 project">
+  <div class="col mb-4 project">
 
-    <div class="col-md-5">
+    <div class="col-m-5">
       <div>
         <h2>
-          <a href="/login">{{title}}</a>
+          {{title}}
         </h2>
 
         <h5>
@@ -17,20 +17,22 @@
         {{content}}
       </p>
 
-      <form>
-        <h5>Add a Comment:</h5>
-        <textarea id="comment"></textarea>
+      <form >
+        <h5 class="solid">Add a Comment:</h5>
+        <textarea class="comment" id="comment"></textarea>
+        <p></p>
         <button class="submit">Submit comment</button>
         <input type="hidden" id="userId" name="userId" value="{{user_id}}"/>
         <input type="hidden" id="blogId" name="blogId" value="{{id}}"/>
       </form>
 
-      {{#each comments as |comment|}}
 
       <h3>Comments</h3>
-      <p>
+      {{#each comments as |comment|}}
+
+      <p class="solidu">
         {{comment.comment_text}} <br>
-        Made by: {{user.username}},{{date_created}}
+        Made by: {{user_id}},{{date_created}}
       </p>
 
       {{/each}}
