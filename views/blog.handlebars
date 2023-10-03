@@ -19,9 +19,10 @@
 
       <form>
         <h5>Add a Comment:</h5>
-        <textarea></textarea>
-        <button>Submit comment</button>
-
+        <textarea id="comment"></textarea>
+        <button class="submit">Submit comment</button>
+        <input type="hidden" id="userId" name="userId" value="{{user_id}}"/>
+        <input type="hidden" id="blogId" name="blogId" value="{{id}}"/>
       </form>
 
       {{#each comments as |comment|}}
@@ -37,3 +38,5 @@
 
   </div>
 </div>
+
+<script src="/js/comment.js"></script>

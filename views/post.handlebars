@@ -1,11 +1,13 @@
 <div class="text-center">
     <h4>Title</h4>
-    <p>Created by {{username}} on {{date_created}}</p>
-
-    <textarea></textarea>
+    <textarea id="title"></textarea>
 
     <h4>Content</h4>
-    <textarea> </textarea>
+    <textarea id="content"></textarea>
 
-    <button class="upload-button">Upload</button>
+    <button type="submit" class="btn btn-primary">Upload</button>
+    <input type="hidden" id="userId" name="userId" value={{user_id}} />
 </div>
+
+
+<script src="/js/post.js"></script>
